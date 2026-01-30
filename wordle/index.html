@@ -1,0 +1,56 @@
+
+
+<html>
+    <head>
+        <title>Wordle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+
+        <link rel="stylesheet" href="wordle.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script src="wordle.js"></script>
+    </head>
+
+    <body>
+        <div id="top"style="display:flex;flex-direction:column;gap:5px">
+            <div style="display: flex; justify-content: center;align-items: center;gap: 5px;">
+                <h1 id="title">TỪ TÂM</h1><img style="width:30px; height: 30px;" src="assets/logo.png">
+            </div>    
+            <p id ="tagline">Yêu thương từ mọi giác quan</p>
+        </div>
+
+        <div id="board">
+        </div>
+        <div id="invalidWord">Từ không hợp lệ</div>
+        <button id="huongdan-open">Hướng Dẫn</button>
+        <div id="huongdan-container">
+            <div id="huongdan">
+                <div style ="height:30px;display: flex;justify-content: start;align-items: center;gap: 10px;margin:0"><h1 style="font-family: logo;">Tâm nói</h1> <img style="height:30px;width:auto;" src = "assets/Asset 2flip.png"></div>
+                <p>Đây là trò chơi đoán từ trong đó người chơi có 6 lượt để đoán 
+                    một từ bí mật gồm 5 chữ cái. Sau mỗi lần đoán, màu sắc của các chữ 
+                    sẽ gợi ý kết quả: màu xanh lá là chữ đúng và đúng vị trí, màu vàng 
+                    là chữ đúng nhưng sai vị trí, còn màu xám là chữ không xuất hiện trong 
+                    từ. Dựa vào các gợi ý này, người chơi điều chỉnh phán đoán cho đến khi 
+                    tìm ra từ đúng hoặc hết lượt.</p>
+                <div style ="display: flex;justify-content: start;align-items: end;gap: 10px;margin:0"><button id="huongdan-close">Tôi nắm</button><img style="height:35px;width:auto" src="assets/Asset 1.png"></div>
+            </div>
+        </div>
+        <h1 id="answer"></h1>
+        <div id="win-container">
+            <div id="win">
+                <h1>Chúc mừng bạn đã đoán đúng từ khóa!</h1>
+                <img style="width:28px; height:auto; margin:0 10px" src="assets/Asset 6.png"><img style="width:30px; height:auto" src = "assets/Asset 5.png"> <img style="width:50px; height:auto" src="assets/Asset 4_1.png">
+                <h1>Hãy chụp màn hình dòng chữ này để có cơ hội nhận quà từ chúng mình nhé!</h1>
+            </div>
+        </div>
+        <div id="lose-container">
+            <div style="display:flex; justify-content: center;align-items: center;gap:10px" id="lose">
+                <img style="width:20px; height:auto" src="assets/Asset 4 (2).png"><h1>Bạn thua rùi. Từ khóa là Tâm sự</h1><img style="width:20px; height:auto" src="assets/Asset 4 (2).png">
+            </div>
+        </div>
+        <div id="keyboardContainer"></div>
+    </body>
+</html>
