@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Nối Tâm</title>
+</head>
+<body>
+    <section class="header">
+        <div id="org-name">
+            <img src="assets/logo.png" alt="LOGO_Tu_Tam">
+            <h1>Từ Tâm</h1>
+        </div>
+        <h2>Yêu thương từ mọi giác quan</h2>
+    </section>
+
+    <section>
+        <div id="board-container"></div>
+    </section>
+
+    <section>
+        <h1 id="score">Số lần gửi đáp án: 0</h1>
+    </section>
+
+    <section>
+        <button id="submit-btn">Gửi đáp án</button>
+        <button id="huongdan-btn">Hướng dẫn</button>
+    </section>
+    <div class="content-container hidden" id="huongdan-container">
+            <div class="huongdan">
+                <div id="huongdan-title">
+                    <h1>Tâm nói</h1>
+                    <img id="img1" src="assets/Asset 2flip.png">
+                </div>
+                <p>
+                    Đây là trò chơi ghép từ theo chủ đề.<br>
+                    Nhiệm vụ của bạn là tìm ra điểm chung giữa các từ và chọn đúng 4 từ thuộc cùng một nhóm. Chọn đúng thì nhóm đó sẽ được khóa lại. Trò chơi kết thúc khi bạn tìm đủ 3 nhóm. 
+                    <br> <span style="font-weight: bold;">Mẹo nhỏ:</span> đừng chỉ nhìn nghĩa bề mặt, vì nhiều từ có thể đánh lạc hướng bạn đó nhen!
+                </p>
+                <div id="close-huongdan">
+                    <button id = "huongdan-close">Tôi Nắm</button>
+                    <img src="assets/Asset 1.png">
+                </div>
+            </div>
+    </div>
+    <div class="content-container hidden" id="win-container">
+        <div id="win">
+            <h1>Bạn đã đoán được tên triển lãm! <img src="assets/Asset 4_1.png"></h1>
+            <h2>Hãy chụp màn hình và bình luận dưới bài post để có cơ hội nhận quà từ chúng mình nhé!</h2>
+            <p id="final-score"></p>
+        </div>
+    </div>
+    <div class="hidden" id="wrong-notification">
+        Chưa đúng, thử lại một lần nữa nhe!
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
