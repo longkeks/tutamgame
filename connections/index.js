@@ -24,6 +24,15 @@ let gameScore = 0
 
 let finalScore = document.getElementById("final-score")
 
+let wrongCount = 0
+
+let isCategoryOneCorrect = false
+let isCategoryTwoCorrect = false
+let isCategoryThreeCorrect = false
+
+let hintsContainer = document.getElementById("hints-container")
+let hints = document.getElementById("hints")
+
 score.innerText = "Số lần gửi đáp án: "+ gameScore
 
 huongDanButton.addEventListener('click',()=>{
@@ -131,7 +140,15 @@ function checkGameStatus() {
     }
 }
 
-
+function giveHint() {
+    wrongCount = 0
+    hintsContainer.classList.remove("hidden")
+    if (!isCategoryOneCorrect) {
+        hints.innerText = "Chạm và Cảm có vẻ liên quan"
+    } else if (!isCategoryTwoCorrect) {
+        hints.innerText = "Mở và Trao có vẻ liên quan"
+    }
+}
 
 function checkAnswers() {
 
@@ -188,6 +205,7 @@ function checkAnswers() {
             submitButton.classList.remove("enabled")
             category.style.top = correctCategories*50
             category.classList.remove("hidden")
+            isCategoryOneCorrect = true
             correctCategories = correctCategories + 1
         }, 1200)
         setTimeout(() => {
@@ -209,6 +227,7 @@ function checkAnswers() {
             submitButton.classList.remove("enabled")
             category.style.top = correctCategories*50
             category.classList.remove("hidden")
+            isCategoryTwoCorrect = true
             correctCategories = correctCategories + 1
         }, 1200)
         setTimeout(() => {
@@ -230,6 +249,7 @@ function checkAnswers() {
             submitButton.classList.remove("enabled")
             category.style.top = correctCategories*50
             category.classList.remove("hidden")
+            isCategoryThreeCorrect = true
             correctCategories = correctCategories + 1
         }, 1200)
         setTimeout(() => {
@@ -244,6 +264,10 @@ function checkAnswers() {
         wrongNotification.classList.remove("hidden")
         setTimeout(() => {
             wrongNotification.classList.add("hidden")
+            wrongCount = wrongCount + 1
+            if (wrongCount === 2){
+                giveHint()
+            }
         }, 1000);
 
         console.log("wrong")

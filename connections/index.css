@@ -225,6 +225,19 @@ body {
     font-size: 8px;
 }
 #win img {
-    width: 20px;
+    width: 30px;
+    height: auto;
+}
+#hints-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: sitka, sans-serif;
+    font-size: 12px;
+    padding: 20px 0px;
+    transition: all 0.2s ease-in-out;
+}
+#hints-container img {
+    width: 30px;
     height: auto;
 }
